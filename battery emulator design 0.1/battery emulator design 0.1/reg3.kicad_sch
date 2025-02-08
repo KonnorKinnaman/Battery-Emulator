@@ -8,7 +8,7 @@
 		(company "Purdue ECET")
 	)
 	(lib_symbols
-		(symbol "Amplifier_Operational:LM741"
+		(symbol "Amplifier_Operational:LM324"
 			(pin_names
 				(offset 0.127)
 			)
@@ -16,7 +16,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0 6.35 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -24,8 +24,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "LM741"
-				(at 0 3.81 0)
+			(property "Value" "LM324"
+				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -34,7 +34,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 1.27 1.27 0)
+				(at -1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -42,8 +42,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm741.pdf"
-				(at 3.81 3.81 0)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
+				(at 1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -51,7 +51,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Operational Amplifier, DIP-8/TO-99-8"
+			(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
 				(at 0 0 0)
 				(effects
 					(font
@@ -60,7 +60,15 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "single opamp"
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "quad opamp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -69,7 +77,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TSSOP*3x3mm*P0.65mm*"
+			(property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -78,7 +86,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "LM741_0_1"
+			(symbol "LM324_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -91,15 +99,13 @@
 						(type background)
 					)
 				)
-			)
-			(symbol "LM741_1_1"
-				(pin input line
-					(at 0 -7.62 90)
-					(length 5.08)
-					(name "NULL"
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
 						(effects
 							(font
-								(size 0.508 0.508)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -147,17 +153,31 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
+			)
+			(symbol "LM324_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -166,16 +186,16 @@
 					)
 				)
 				(pin input line
-					(at 2.54 -7.62 90)
-					(length 6.35)
-					(name "NULL"
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
 						(effects
 							(font
-								(size 0.508 0.508)
+								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -193,7 +213,163 @@
 							)
 						)
 					)
-					(number "6"
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM324_3_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM324_4_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM324_5_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -211,25 +387,7 @@
 							)
 						)
 					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 0 2.54 270)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -923,126 +1081,12 @@
 				)
 			)
 		)
-		(symbol "power:VEE"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "VEE"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VEE\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VEE_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.27) (xy -0.762 1.27) (xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "VEE_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "VEE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(junction
 		(at 191.77 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "248e058d-61a2-4356-8a37-e64eaa14fdd6")
-	)
-	(junction
-		(at 137.16 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6053c072-9d53-49d5-abc8-e209ee5f8492")
 	)
 	(junction
 		(at 132.08 124.46)
@@ -1086,42 +1130,6 @@
 		(color 0 0 0 0)
 		(uuid "d3359bd2-bfd4-4f7c-a45c-2e19ddacfc06")
 	)
-	(junction
-		(at 137.16 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd0965db-1345-4219-9036-e2694ccfca6b")
-	)
-	(wire
-		(pts
-			(xy 137.16 87.63) (xy 137.16 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07fbe632-dc29-43c8-8493-95c7d8ffbc16")
-	)
-	(wire
-		(pts
-			(xy 148.59 113.03) (xy 153.67 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b2c7659-c63a-4817-94c8-713aeaef3601")
-	)
-	(wire
-		(pts
-			(xy 137.16 109.22) (xy 137.16 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1102ee3c-731e-441c-9712-ea20188fafd5")
-	)
 	(wire
 		(pts
 			(xy 205.74 78.74) (xy 205.74 83.82)
@@ -1164,16 +1172,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 87.63) (xy 140.97 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28705bbc-f36a-43d4-bb15-0675c6c7597f")
-	)
-	(wire
-		(pts
 			(xy 132.08 124.46) (xy 143.51 124.46)
 		)
 		(stroke
@@ -1204,16 +1202,6 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 113.03) (xy 153.67 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3faa3262-d035-42cd-946a-ee8183c48a32")
-	)
-	(wire
-		(pts
 			(xy 191.77 91.44) (xy 191.77 93.98)
 		)
 		(stroke
@@ -1241,16 +1229,6 @@
 			(type default)
 		)
 		(uuid "480dd8ab-c10c-4615-8241-8c2a8dbb2c8d")
-	)
-	(wire
-		(pts
-			(xy 148.59 87.63) (xy 153.67 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5cd516c9-e661-4ff8-9446-ba3c2ebdda8a")
 	)
 	(wire
 		(pts
@@ -1314,16 +1292,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 113.03) (xy 140.97 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "972fc088-e439-4ee2-84f4-a302e6d87213")
-	)
-	(wire
-		(pts
 			(xy 104.14 90.17) (xy 116.84 90.17)
 		)
 		(stroke
@@ -1341,16 +1309,6 @@
 			(type default)
 		)
 		(uuid "9a9b56c6-bfc0-4ebb-89ba-d01298b74c9b")
-	)
-	(wire
-		(pts
-			(xy 137.16 85.09) (xy 137.16 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abbb3824-e992-4a7b-9758-5925e2f3082d")
 	)
 	(wire
 		(pts
@@ -1444,16 +1402,6 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 87.63) (xy 153.67 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1bbc64f-9e14-42bb-bea6-9c7b9f63840e")
-	)
-	(wire
-		(pts
 			(xy 205.74 78.74) (xy 213.36 78.74)
 		)
 		(stroke
@@ -1471,16 +1419,6 @@
 			(type default)
 		)
 		(uuid "fbd913f7-ea3e-4ea0-a6ef-32958c02d6bf")
-	)
-	(wire
-		(pts
-			(xy 137.16 113.03) (xy 137.16 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc30be3d-74a2-45cf-9af8-865406178caf")
 	)
 	(wire
 		(pts
@@ -1934,139 +1872,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 144.78 113.03 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "682ab48e-d3dc-4031-ba23-734c19ad45cb")
-		(property "Reference" "C20"
-			(at 151.13 111.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF"
-			(at 151.13 109.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
-			(at 140.97 113.9952 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 144.78 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "793ebc25-ad97-4ded-9ea0-8f3554fcee1e")
-		)
-		(pin "2"
-			(uuid "e46cee88-8912-464b-98c7-af71e4151d51")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VEE")
-		(at 137.16 114.3 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7baf1c4f-80ac-4c91-b16e-517d91c807ed")
-		(property "Reference" "#PWR013"
-			(at 137.16 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VEE"
-			(at 137.16 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5a53057d-df0b-40ca-8782-2e544539d165")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VCC")
 		(at 158.75 77.47 0)
 		(unit 1)
@@ -2200,139 +2005,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 144.78 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "95cfb469-7142-46e9-9ed6-a806f51a7528")
-		(property "Reference" "C3"
-			(at 146.05 81.28 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF"
-			(at 147.32 83.82 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
-			(at 148.59 86.6648 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 144.78 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8a54d8f1-1f7e-4eae-8a51-2a120bedd224")
-		)
-		(pin "2"
-			(uuid "3dbea847-b755-45d7-8fef-e5a57667678d")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 137.16 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d05c494-f4da-4989-a94c-3da1cfc2eff4")
-		(property "Reference" "#PWR012"
-			(at 137.16 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 137.16 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f5b85071-ad7a-4a0d-838f-816bddd70571")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 120.65 99.06 90)
 		(unit 1)
@@ -2395,71 +2067,6 @@
 			(project "battery emulator design 0.1"
 				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 153.67 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b3197299-cd6d-47bb-bd4b-f49cd42e1bcf")
-		(property "Reference" "#PWR047"
-			(at 153.67 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 153.67 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 153.67 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 153.67 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bd1ee81d-bf08-4f52-9ea4-0a67afac1072")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -2674,71 +2281,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 153.67 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c80f4b3d-7e4b-451d-8f11-bc64b7228ea2")
-		(property "Reference" "#PWR014"
-			(at 153.67 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 153.67 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 153.67 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 153.67 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e399683f-4764-4cc4-ab15-d73b0a9a12a4")
-		)
-		(instances
-			(project "battery emulator design 0.1"
-				(path "/eb54f7d9-731a-4a54-adbe-3a25c9be0c1a/21e5e6aa-5497-4e97-b9fb-afa8f1db1d76"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 119.38 124.46 90)
 		(unit 1)
@@ -2807,7 +2349,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:LM741")
+		(lib_id "Amplifier_Operational:LM324")
 		(at 139.7 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2823,7 +2365,7 @@
 				)
 			)
 		)
-		(property "Value" "LM741"
+		(property "Value" "LM324"
 			(at 149.86 100.7111 0)
 			(effects
 				(font
@@ -2832,7 +2374,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
-			(at 140.97 100.33 0)
+			(at 138.43 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2840,8 +2382,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm741.pdf"
-			(at 143.51 97.79 0)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
+			(at 140.97 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2849,7 +2391,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
 			(at 139.7 101.6 0)
 			(effects
 				(font
@@ -2881,6 +2423,24 @@
 		)
 		(pin "8"
 			(uuid "b16809b7-d3fd-46a1-94b6-be49571a50e8")
+		)
+		(pin "9"
+			(uuid "b8fda831-285a-4640-91c7-aeea62ea617a")
+		)
+		(pin "14"
+			(uuid "a14f06a8-1a49-449c-a47a-bde10382d2fe")
+		)
+		(pin "12"
+			(uuid "0831e2af-34e2-4d2b-862a-78eb9e920b3e")
+		)
+		(pin "13"
+			(uuid "1e9411c3-b535-40f7-8890-d35ae8290f43")
+		)
+		(pin "11"
+			(uuid "152429bb-5c92-4277-aa02-719338b911db")
+		)
+		(pin "10"
+			(uuid "3ed18326-14fb-4d51-bd8f-0719822246c4")
 		)
 		(instances
 			(project "battery emulator design 0.1"
