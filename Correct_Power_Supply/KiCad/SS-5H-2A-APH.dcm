@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SS-5H-2A-APH
+D Fuse Subminiature Slow Blow Acting 2A 300V Radial 8.5 X 4.3 X 7.85mm Plastic Ammo
+K
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-ss-5h-subminiature-radial-leaded-time-delay-fuses-data-sheet.pdf
+$ENDCMP
+#
+#End Doc Library
